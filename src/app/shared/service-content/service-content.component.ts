@@ -9,6 +9,7 @@ export class ServiceContentComponent implements OnInit {
   
   @Input() title: string | undefined;
   @Input() paragraphs: any;
+  @Input() images: any;
 
   constructor() { }
 

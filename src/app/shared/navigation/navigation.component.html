@@ -1,13 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
     <a class="navbar-brand" routerLink="">
         <img src="assets/logomajestic.ico" class="logo">
+        <span class="sr-only active">(current)</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop"
+        aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" data-toggle="collapse" data-target=".navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarTop">
         <ul class="navbar-nav w-100">
             <li class="nav-item ml-auto">
                 <a class="nav-link" routerLink="/landscaping">Landscaping</a>
@@ -30,6 +31,61 @@
             <li class="nav-item ml-auto">
                 <a class="nav-link" routerLink="/about">About</a>
             </li>
+            <button type="submit" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#emailForm">
+                pedro@yourutahlandscaper.com
+            </button>
         </ul>
     </div>
 </nav>
+
+<div id="emailForm" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title">Email Us!</h1>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="POST" action="">
+                    <input type="hidden" name="_token" value="">
+                    <p class="lead text-center">
+                        We are glad you want to contact us. Please leave a message and we will get back promptly.
+                    </p>
+                    <div class="form-group">
+                        <label class="control-label">Email Address</label>
+                        <div>
+                            <input type="email" class="form-control input-lg" name="email" value=""
+                                placeholder="you@domain.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Subject</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="subject" value=""
+                                placeholder="What can we build for you?">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Message:</label>
+                        <div>
+                            <textarea class="form-control input-lg" name="message" value=""
+                                placeholder="How can we serve you?">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button type="submit" class="btn btn-success">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p class="lead">
+                    A copy of this email will be sent to your inbox.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

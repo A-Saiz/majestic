@@ -1,12 +1,52 @@
-<header class="header-content">
-    <title class="page-title">{{title}}</title>
-</header>
-<br>
-<br>
 <div class="service-container">
-    <ul class="list-container">
-        <li *ngFor="let paragraph of paragraphs">
-            <p class="text-container">{{paragraph.text}}</p>
-        </li>
-    </ul>
+    <div class="container d-flex justify-content-center mt-3 text-center">
+        <h4 class="title">
+            {{title}}
+        </h4>
+    </div>
+    <br>
+    <br>
+    <div *ngFor="let paragraph of paragraphs" class="container d-flex">
+        <div class="text-container" [innerHTML]="paragraph.text"></div>
+    </div>
+    <!-- Modal gallery -->
+    <section class="">
+        <!-- Section: Images -->
+        <section class="">
+            <div class="row">
+                <div *ngFor="let image of images" class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                    <div class="m-3 bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                        <img [src]="image.src" class="w-100" />
+                        <a href="{{image.src}}" data-toggle="modal" data-target="#exampleModal1">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Images -->
+
+        <!-- Section: Modals -->
+        <section class="">
+            <!-- Modal 1 -->
+            <div class="modal fade right" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label"
+                aria-hidden="true">
+                <div *ngFor="let image of images" class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="ratio ratio-1x1">
+                            <img class="img-responsive" [src]="images.src" />
+                        </div>
+
+                        <div class="text-center py-3">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Modals -->
+    </section>
+    <!-- Modal gallery -->
 </div>

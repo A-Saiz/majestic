@@ -34,6 +34,30 @@ $majestic-construction-theme: mat-light-theme((
 @include angular-material-theme($majestic-construction-theme);
 
 /* You can add global styles to this file, and also import other style files */
+@import '~mdb-ui-kit/css/mdb.min.css';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: linear-gradient(180deg, #464646 0%, #FFF 100%); }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(180deg, #464646 0%, #FFF 100%) no-repeat;
+  opacity: 1;
+  transition: 3s opacity;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+.paragraph {
+  text-indent: 16px;
+}
+
+.avatar {
+  float: left;
+  box-shadow: 2px 2px 4px #00000e;
+  border-radius: 50%;
+  margin-right: 10px;
+}
