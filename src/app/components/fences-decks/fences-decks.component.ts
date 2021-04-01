@@ -34,4 +34,70 @@ export class FencesDecksComponent implements OnInit {
     }
   ];
 
+  images = [
+    {
+      src: "assets/fence-deck/fd1.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd2.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd3.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd4.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd5.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd6.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd7.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd8.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd9.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd10.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd11.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd12.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd13.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd14.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd15.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd16.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd17.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd18.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd19.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd20.jpg"
+    },
+    {
+      src: "assets/fence-deck/fd21.jpg"
+    },
+  ]
+
 }

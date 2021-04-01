@@ -30,6 +30,18 @@ export class SprinklerComponent implements OnInit {
       and a lifetime guarantee on valves. Call us today, and we’ll get ’er done!\
       </p>'
     }
+  ];
+
+  images = [
+    {
+      src: "assets/sprinklers/sprinkler1.jpg"
+    },
+    {
+      src: "assets/sprinklers/sprinkler2.jpg"
+    },
+    {
+      src: "assets/sprinklers/sprinkler3.jpg"
+    },
   ]
 
 }

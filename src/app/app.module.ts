@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MaterialModule } from "./material/material.module";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,8 @@ import { AboutComponent } from './components/about/about.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServiceContentComponent } from './shared/service-content/service-content.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { ServiceContentComponent } from './shared/service-content/service-conten
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    HttpClientModule
+    //MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

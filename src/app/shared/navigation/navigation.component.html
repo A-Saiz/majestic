@@ -11,29 +11,33 @@
     <div class="collapse navbar-collapse" id="navbarTop">
         <ul class="navbar-nav w-100">
             <li class="nav-item ml-auto">
-                <a class="nav-link" routerLink="/landscaping">Landscaping</a>
+                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/landscaping">Landscaping</a>
             </li>
             <li class="nav-item ml-auto">
-                <a class="nav-link" routerLink="/fences-decks">Fences & Decks</a>
+                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/fences-decks">Fences & Decks</a>
             </li>
             <li class="nav-item ml-auto">
-                <a class="nav-link" routerLink="/sprinkler">Sprinklers</a>
+                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/sprinkler">Sprinklers</a>
             </li>
             <li class="nav-item ml-auto">
-                <a class="nav-link" routerLink="/remodeling">Remodeling</a>
+                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/remodeling">Remodeling</a>
             </li>
             <li class="nav-item ml-auto">
-                <a class="nav-link" routerLink="/concrete">Concrete</a>
+                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/concrete">Concrete</a>
             </li>
-            <li class="nav-item ml-auto">
+            <!-- <li class="nav-item ml-auto">
                 <a class="nav-link" routerLink="/reviews">Google Reviews</a>
+            </li> -->
+            <li class="nav-item ml-auto">
+                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/about">About</a>
+            </li>
+            <br>
+            <li class="nav-item ml-auto">
+                <a class="nav-link" data-toggle="modal" data-target="#emailForm">pedro@yourutahlandscaper.com</a>
             </li>
             <li class="nav-item ml-auto">
-                <a class="nav-link" routerLink="/about">About</a>
+                <a class="nav-link" type="tel">801-759-4477</a>
             </li>
-            <button type="submit" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#emailForm">
-                pedro@yourutahlandscaper.com
-            </button>
         </ul>
     </div>
 </nav>
@@ -43,48 +47,47 @@
         <div class="modal-content">
             <div class="modal-header text-center">
                 <h1 class="modal-title">Email Us!</h1>
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse.show" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
             </div>
             <div class="modal-body">
-                <form role="form" method="POST" action="">
+                <form [formGroup]="formData">
                     <input type="hidden" name="_token" value="">
-                    <p class="lead text-center">
+                    <p class="lead text-center text-primary">
                         We are glad you want to contact us. Please leave a message and we will get back promptly.
                     </p>
+                    <p class="lead text-center text-success">
+                        A copy of this email will be sent to your inbox
+                    </p>
                     <div class="form-group">
-                        <label class="control-label">Email Address</label>
+                        <label for="email" class="control-label">Email Address</label>
                         <div>
-                            <input type="email" class="form-control input-lg" name="email" value=""
+                            <input type="email" formControlName="email" aria-describedby="emailHelp" class="form-control input-lg" name="email" value=""
                                 placeholder="you@domain.com">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Subject</label>
+                        <label for="subject" class="control-label">Subject</label>
                         <div>
-                            <input type="text" class="form-control input-lg" name="subject" value=""
+                            <input type="text" formControlName="subject" class="form-control input-lg" name="subject" value=""
                                 placeholder="What can we build for you?">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Message:</label>
+                        <label for="message" class="control-label">Message:</label>
                         <div>
-                            <textarea class="form-control input-lg" name="message" value=""
+                            <textarea class="form-control input-lg" name="message" formControlName="message" value=""
                                 placeholder="How can we serve you?">
                             </textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <button type="submit" class="btn btn-success">
-                                Submit
-                            </button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <p class="lead">
-                    A copy of this email will be sent to your inbox.
-                </p>
+                <button type="submit" (click)="onSubmit()" [disabled]="!formData.valid" class="btn btn-primary" data-toggle="collapse" data-target=".navbar-collapse.show" data-dismiss="modal">Submit Email</button>
+                <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target=".navbar-collapse.show" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

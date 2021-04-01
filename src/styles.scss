@@ -36,7 +36,7 @@ $majestic-construction-theme: mat-light-theme((
 /* You can add global styles to this file, and also import other style files */
 @import '~mdb-ui-kit/css/mdb.min.css';
 
-html, body { height: 100%; }
+html, body { margin: 0; height: 100%; }
 
 body {
   margin: 0;
@@ -52,6 +52,8 @@ body.fade-out {
 }
 
 .paragraph {
+  color: #333;
+  text-align: justify;
   text-indent: 16px;
 }
 
@@ -60,4 +62,8 @@ body.fade-out {
   box-shadow: 2px 2px 4px #00000e;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.text-container {
+  line-height: 28px;
 }

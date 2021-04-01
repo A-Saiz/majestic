@@ -1,0 +1,72 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+
+.card {
+  margin: 10px;
+}
+
+.card-body {
+  background: lightgrey;
+}
+
+.team-container {
+    padding: 30px;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  color: #FFF;
+  font-size: 5rem;
+  margin: 10px;
+  text-align: center;
+  text-shadow: 5px 5px #000;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+h3 {
+  font-family: "Abril Fatface", cursive;
+  color: #FFF0A5;
+  text-align: center;
+  text-shadow: 1px 1px #000;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+  
+.hero-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+  
+.hero {
+  background: url('../../../assets/team/hero.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  transition: transform 2s;
+}
+  
+.hero:hover {
+  transform: scale(1.15);
+}
+  
+.hero-content {
+  position: absolute;
+  top: 15px;
+}
+
+.team-content {
+  font-family: 'Amatic SC';
+  font-size: 26px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.team-image {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 7% 50%, 0% 0%);
+}
+  

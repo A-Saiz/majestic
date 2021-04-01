@@ -17,7 +17,7 @@ export class AboutComponent implements OnInit {
   paragraphs = [
     {
       text: '<p class="paragraph">\
-              <img class="avatar" src="assets\\logomajestic.ico" alt="alt text">\
+              <img class="avatar" src="assets\\pedro.jpg" alt="pedro">\
               Pedro Albarran is the owner of Majestic Construction & Landscaping.\
               Born in Mexico, he came to the US in 1997 landing in California before\
               settling in majestic Utah.\

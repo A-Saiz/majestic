@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'sprinkler', component: SprinklerComponent},
   {path: 'remodeling', component: RemodelingComponent},
   {path: 'concrete', component: ConcreteComponent},
-  {path: 'reviews', component: ReviewsComponent},
+  //{path: 'reviews', component: ReviewsComponent},
   {path: 'about', component: AboutComponent}
 ];
 

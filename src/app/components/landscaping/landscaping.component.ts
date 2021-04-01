@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'landscaping',
@@ -34,22 +35,64 @@ export class LandscapingComponent implements OnInit {
 
   images = [
     {
-      src: "assets/Concrete/one-concrete.jpg"
+      src: "assets/concrete/concrete1.jpg"
     },
     {
-      src: "assets/Concrete/two-concrete.jpg"
+      src: "assets/concrete/concrete2.jpg"
     },
     {
-      src: "assets/Concrete/three-concrete.jpg"
+      src: "assets/concrete/concrete3.jpg"
     },
     {
-      src: "assets/Concrete/four-concrete.jpg"
+      src: "assets/concrete/concrete4.jpg"
     },
     {
-      src: "assets/Concrete/five-concrete.jpg"
+      src: "assets/concrete/concrete5.jpg"
     },
     {
-      src: "assets/Concrete/six-concrete.jpg"
+      src: "assets/concrete/concrete6.jpg"
     },
-  ]
+    {
+      src: "assets/concrete/concrete7.jpg"
+    },
+    {
+      src: "assets/concrete/concrete8.jpg"
+    },
+    {
+      src: "assets/concrete/concrete9.jpg"
+    },
+    {
+      src: "assets/concrete/concrete10.png"
+    },
+    {
+      src: "assets/concrete/concrete11.jpg"
+    },
+    {
+      src: "assets/concrete/concrete12.jpg"
+    },
+    {
+      src: "assets/concrete/concrete13.jpg"
+    },
+    {
+      src: "assets/concrete/concrete14.jpg"
+    },
+    {
+      src: "assets/concrete/concrete15.jpg"
+    },
+    {
+      src: "assets/concrete/concrete16.jpg"
+    },
+    {
+      src: "assets/concrete/concrete17.jpg"
+    },
+    {
+      src: "assets/concrete/concrete18.jpg"
+    },
+    {
+      src: "assets/concrete/concrete19.jpg"
+    },
+    {
+      src: "assets/concrete/concrete20.jpg"
+    },
+  ];
 }

@@ -26,4 +26,37 @@ export class RemodelingComponent implements OnInit {
     }
   ];
 
+  images = [
+    {
+      src: "assets/remodel/remodel1.jpg"
+    },
+    {
+      src: "assets/remodel/remodel2.jpg"
+    },
+    {
+      src: "assets/remodel/remodel3.jpg"
+    },
+    {
+      src: "assets/remodel/remodel4.jpg"
+    },
+    {
+      src: "assets/remodel/remodel5.jpg"
+    },
+    {
+      src: "assets/remodel/remodel6.jpg"
+    },
+    {
+      src: "assets/remodel/remodel7.jpg"
+    },
+    {
+      src: "assets/remodel/remodel8.jpg"
+    },
+    {
+      src: "assets/remodel/remodel9.jpg"
+    },
+    {
+      src: "assets/remodel/remodel10.jpg"
+    },
+  ]
+
 }
