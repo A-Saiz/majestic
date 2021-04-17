@@ -2,8 +2,23 @@
     color: white;
 }
 
-.navbar-custom {
-    background-color: #202020;
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Agency FB';
+    letter-spacing: 2.22px;
+    font-size: 20px;
+}
+
+.nav-link.active {
+    font-size: xx-large;
+    color: deepskyblue !important;
+}
+
+.lead {
+    font-style: italic;
 }
 
 .logo {
@@ -13,3 +28,29 @@
 a {
     cursor: pointer;
 }
+
+.text-info {
+    text-align: center;
+}
+
+.material-icons.lightgrey {color: lightgrey; vertical-align: middle;}
+
+//Floating Action Buttons
+.floatingBtns {
+    position: fixed;
+    z-index: 1;
+    bottom: 20%;
+}
+.button-icon {
+    color: white;
+}
+
+  .button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  

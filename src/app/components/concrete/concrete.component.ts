@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConcreteComponent implements OnInit {
 
-  title = "MAJESTIC CONCRETE SERVICES";
+  title = "Majestic Concrete Work";
 
   constructor() { }
 
@@ -30,7 +30,7 @@ export class ConcreteComponent implements OnInit {
     },
     {
       text: '<p class="paragraph">\
-      We offer a one-year guarantee on all concrete projects. Give us a call today\
+      We offer a one-year guarantee on all concrete projects. <a href="tel:1-801-759-4477">Give us a call</a> today\
       to discuss what you want!\
     </p>'
     }

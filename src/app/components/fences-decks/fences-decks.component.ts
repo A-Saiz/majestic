@@ -9,7 +9,7 @@ export class FencesDecksComponent implements OnInit {
 
   constructor() { }
 
-  title = "MAJESTIC FENCE & DECK SERVICES";
+  title = "Majestic Fences & Decks";
 
   ngOnInit(): void {
   }
@@ -24,13 +24,11 @@ export class FencesDecksComponent implements OnInit {
       </p>'
     },
     {
-      text: '<p class="paragraph">\
-      With over 20 years of experience, we know every material and brand\
-      intimately—its durability, price, and value—and can match it to your needs\
-      and budget. Your satisfaction is guaranteed: Majestic offers a 5-year\
-      warranty on fence and deck work. Drop us a line! We look forward to\
-      working with you.\
-    </p>'
+      text: '<p class="paragraph">With over 20 years of experience, we know every material\
+      and brand intimately—its durability, price, and value—and can match it to your needs\
+      and budget. Majestic offers a 5-year warranty on all fence and deck work. Contact us\
+      today! We look forward to working with you.\
+      </p>'
     }
   ];
 

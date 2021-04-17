@@ -19,6 +19,11 @@ import { HomeComponent } from './components/home/home.component';
 import { ServiceContentComponent } from './shared/service-content/service-content.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollToTopComponent } from './shared/scroll-to-top/scroll-to-top.component';
+import { RecaptchaModule, RecaptchaFormsModule } from "ng-recaptcha";
+import { MessageComponent } from './shared/message/message.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     NavigationComponent,
     HomeComponent,
-    ServiceContentComponent
+    ServiceContentComponent,
+    ScrollToTopComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,11 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+    MatDialogModule,
+    NgbModule
     //MDBBootstrapModule.forRoot()
   ],
   providers: [],

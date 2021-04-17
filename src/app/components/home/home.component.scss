@@ -57,6 +57,12 @@ h3 {
 .hero-content {
   position: absolute;
   top: 15px;
+  left: 30px;
+}
+
+.logo-image {
+  width: 200px;
+  filter: drop-shadow(0 2rem 1rem #202020);
 }
 
 .team-content {

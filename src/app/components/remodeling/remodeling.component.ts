@@ -9,7 +9,7 @@ export class RemodelingComponent implements OnInit {
 
   constructor() { }
 
-  title = "HOME & COMMERCIAL REMODELING SERVICES";
+  title = "Home & Commercial Remodeling";
 
   ngOnInit(): void {
   }
@@ -21,7 +21,8 @@ export class RemodelingComponent implements OnInit {
       & Landscaping has got you covered. From sprucing up a single room to building\
       a spacious addition, we can execute any job big or small. Tile and flooring,\
       painting, light and electrical, plumbing, drywall, framing—you name it,\
-      we do it! Email or call us today for a quote. We look forward to working with you!\
+      we do it! Email or <a href="tel:1-801-759-4477">call us</a> today for a quote.\
+      We look forward to working with you!\
     </p>'
     }
   ];

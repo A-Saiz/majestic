@@ -1,93 +1,144 @@
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <a class="navbar-brand" routerLink="">
-        <img src="assets/logomajestic.ico" class="logo">
-        <span class="sr-only active">(current)</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop"
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTop"
         aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarTop">
-        <ul class="navbar-nav w-100">
-            <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/landscaping">Landscaping</a>
+        <ul ngbNav #nav="ngbNav" class="nav navbar-nav w-100">
+            <li ngbNavItem class="nav-item ml-4">
+                <a ngbNavLink data-toggle="collapse" routerLink="" class="nav-link"
+                    data-target=".navbar-collapse.show">Home</a>
             </li>
-            <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/fences-decks">Fences & Decks</a>
+            <li ngbNavItem class="nav-item ml-4">
+                <a ngbNavLink data-toggle="collapse" routerLink="/landscaping" class="nav-link"
+                    data-target=".navbar-collapse.show">Landscaping</a>
             </li>
-            <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/sprinkler">Sprinklers</a>
+            <li ngbNavItem class="nav-item ml-4">
+                <a ngbNavLink data-toggle="collapse" routerLink="/fences-decks" class="nav-link"
+                    data-target=".navbar-collapse.show">Fences & Decks</a>
             </li>
-            <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/remodeling">Remodeling</a>
+            <li ngbNavItem class="nav-item ml-4">
+                <a ngbNavLink data-toggle="collapse" routerLink="/sprinkler" class="nav-link"
+                    data-target=".navbar-collapse.show">Sprinklers</a>
             </li>
-            <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/concrete">Concrete</a>
+            <li ngbNavItem class="nav-item ml-4">
+                <a ngbNavLink data-toggle="collapse" routerLink="/remodeling" class="nav-link"
+                    data-target=".navbar-collapse.show">Remodeling</a>
             </li>
-            <!-- <li class="nav-item ml-auto">
-                <a class="nav-link" routerLink="/reviews">Google Reviews</a>
-            </li> -->
-            <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/about">About</a>
+            <li ngbNavItem class="nav-item ml-4">
+                <a ngbNavLink data-toggle="collapse" routerLink="/concrete" class="nav-link"
+                    data-target=".navbar-collapse.show">Concrete</a>
+            </li>
+            <li ngbNavItem class="nav-item ml-4">
+                <a ngbNavLink data-toggle="collapse" routerLink="/about" class="nav-link"
+                    data-target=".navbar-collapse.show">About</a>
             </li>
             <br>
-            <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="modal" data-target="#emailForm">pedro@yourutahlandscaper.com</a>
-            </li>
-            <li class="nav-item ml-auto">
-                <a class="nav-link" type="tel">801-759-4477</a>
-            </li>
+            <div class="ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-info" data-toggle="modal" data-target="#emailForm"><span
+                            class="material-icons lightgrey">email</span> pedro@yourutahlandscaper.com</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="tel:1-801-759-4477"><span
+                            class="material-icons lightgrey">phone_in_talk</span> 801-759-4477</a>
+
+                </li>
+            </div>
         </ul>
     </div>
 </nav>
+<div [ngbNavOutlet]="nav"></div>
+
+<section class="floatingBtns">
+    <div class="button-row">
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <button mat-fab color="primary" aria-label="Call 801-759-4477">
+            <a class="button-icon" href="tel:1-801-759-4477">
+                <mat-icon>call</mat-icon>
+            </a>
+          </button>
+        </div>
+        <div class="container-fluid">
+          <button mat-fab color="warn" data-toggle="modal" data-target="#emailForm" aria-label="Email pedro@yourutahlandscaper.com">
+            <mat-icon>email</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <div id="emailForm" class="modal fade">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
                 <h1 class="modal-title">Email Us!</h1>
-                <button type="button" data-toggle="collapse" data-target=".navbar-collapse.show" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse.show" class="close"
+                    data-dismiss="modal" aria-label="Close" (click)="resetFields()">
                     <span aria-hidden="true">&times;</span>
-                  </button>
+                </button>
             </div>
             <div class="modal-body">
                 <form [formGroup]="formData">
                     <input type="hidden" name="_token" value="">
                     <p class="lead text-center text-primary">
-                        We are glad you want to contact us. Please leave a message and we will get back promptly.
+                        Thank you for your interest! Shoot us a note, and we'll get back to you promptly.
                     </p>
                     <p class="lead text-center text-success">
-                        A copy of this email will be sent to your inbox
+                        You will receive a copy of this email.
                     </p>
                     <div class="form-group">
                         <label for="email" class="control-label">Email Address</label>
                         <div>
-                            <input type="email" formControlName="email" aria-describedby="emailHelp" class="form-control input-lg" name="email" value=""
-                                placeholder="you@domain.com">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <input type="email" formControlName="email" aria-describedby="emailHelp"
+                                class="form-control input-lg" name="email" value="" placeholder="you@domain.com"
+                                required>
+                            <small id="emailHelp" class="form-text text-muted">We will never share your email.</small>
+                        </div>
+                        <div *ngIf="email?.errors" class="alert alert-danger">
+                            <div *ngIf="email?.errors?.required">
+                                Email required
+                            </div>
+                            <div *ngIf="email?.errors?.email">
+                                Enter valid email
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="subject" class="control-label">Subject</label>
                         <div>
-                            <input type="text" formControlName="subject" class="form-control input-lg" name="subject" value=""
-                                placeholder="What can we build for you?">
+                            <input type="text" formControlName="subject" class="form-control input-lg" name="subject"
+                                value="" placeholder="What is your project?" required>
+                        </div>
+                        <div *ngIf="subject?.errors?.required" class="alert alert-danger">
+                            Subject required
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message" class="control-label">Message:</label>
                         <div>
                             <textarea class="form-control input-lg" name="message" formControlName="message" value=""
-                                placeholder="How can we serve you?">
+                                placeholder="How can we help you?" required>
                             </textarea>
                         </div>
+                        <div *ngIf="message?.errors?.required" class="alert alert-danger">
+                            Message required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <re-captcha (resolved)="resolved($event)" formControlName="recaptcha" siteKey={{siteKey}}
+                            theme="dark">
+                        </re-captcha>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="submit" (click)="onSubmit()" [disabled]="!formData.valid" class="btn btn-primary" data-toggle="collapse" data-target=".navbar-collapse.show" data-dismiss="modal">Submit Email</button>
-                <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target=".navbar-collapse.show" data-dismiss="modal">Close</button>
+                <button type="submit" (click)="onSubmit()" [disabled]="!formData.valid" class="btn btn-primary"
+                    data-toggle="collapse" data-target=".navbar-collapse.show" data-dismiss="modal">Submit</button>
+                <button type="button" (click)="resetFields()" class="btn btn-secondary" data-toggle="collapse"
+                    data-target=".navbar-collapse.show" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

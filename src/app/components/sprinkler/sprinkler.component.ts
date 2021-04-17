@@ -9,7 +9,7 @@ export class SprinklerComponent implements OnInit {
 
   constructor() { }
 
-  title = "MAJESTIC SPRINKLER SERVICES"
+  title = "Majestic Sprinkler Installation"
 
   ngOnInit(): void {
   }
@@ -27,7 +27,7 @@ export class SprinklerComponent implements OnInit {
       text: '<p class="paragraph">\
       Majestic owns all of the equipment needed to dig trenches and lay pipes\
       quickly and efficiently. We offer a 10-year warranty on sprinkler parts,\
-      and a lifetime guarantee on valves. Call us today, and we’ll get ’er done!\
+      and a lifetime guarantee on valves. <a href="tel:1-801-759-4477">Call us</a> today, and we’ll get ’er done!\
       </p>'
     }
   ];

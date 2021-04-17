@@ -34,7 +34,7 @@ $majestic-construction-theme: mat-light-theme((
 @include angular-material-theme($majestic-construction-theme);
 
 /* You can add global styles to this file, and also import other style files */
-@import '~mdb-ui-kit/css/mdb.min.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 html, body { margin: 0; height: 100%; }
 
@@ -53,7 +53,6 @@ body.fade-out {
 
 .paragraph {
   color: #333;
-  text-align: justify;
   text-indent: 16px;
 }
 
@@ -64,6 +63,17 @@ body.fade-out {
   margin-right: 10px;
 }
 
+.about-hero {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  filter: drop-shadow(20px 25px 10px #50505069);
+}
+
 .text-container {
   line-height: 28px;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
